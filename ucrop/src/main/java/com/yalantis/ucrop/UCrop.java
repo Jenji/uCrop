@@ -31,6 +31,7 @@ public class UCrop {
 
     public static final int REQUEST_CROP = 69;
     public static final int RESULT_ERROR = 96;
+    public static final int RESULT_SKIP = 97;
 
     private static final String EXTRA_PREFIX = BuildConfig.APPLICATION_ID;
 

@@ -156,7 +156,9 @@ public class UCropActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.menu_crop) {
             cropAndSaveImage();
         } else if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
+            // onBackPressed();
+            this.setResultSkip();
+            this.finish();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -631,6 +633,10 @@ public class UCropActivity extends AppCompatActivity {
 
     protected void setResultError(Throwable throwable) {
         setResult(UCrop.RESULT_ERROR, new Intent().putExtra(UCrop.EXTRA_ERROR, throwable));
+    }
+
+    protected void setResultSkip() {
+        setResult(UCrop.RESULT_SKIP, new Intent());
     }
 
 }
