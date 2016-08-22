@@ -544,11 +544,14 @@ public class UCropActivity extends AppCompatActivity {
 
     private void setInitialState() {
         if (mShowBottomControls) {
+            /*
             if (mWrapperStateAspectRatio.getVisibility() == View.VISIBLE) {
                 setWidgetState(R.id.state_aspect_ratio);
             } else {
                 setWidgetState(R.id.state_scale);
             }
+            */
+            setWidgetState(R.id.state_rotate);
         } else {
             setAllowedGestures(0);
         }
